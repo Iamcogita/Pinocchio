@@ -5,26 +5,23 @@ public class Main {
 
         Pinocchio pinocchio = new Pinocchio();
 
-        pinocchio.tellLies();
-        pinocchio.tellLies();
-        pinocchio.tellLies();
-        pinocchio.repairHead();
-        pinocchio.doGoodDeeds();
-        pinocchio.repairHead();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.doGoodDeeds();
-        pinocchio.tellLies();
-        pinocchio.tellLies();
-        pinocchio.tellLies();
-        pinocchio.tellLies();
-        pinocchio.repairHead();
-        pinocchio.doGoodDeeds();
+        pinocchio.tryToBecomeReal(8, 2);
 
+        pinocchio.doGoodDeeds();
+        pinocchio.doGoodDeeds();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.doGoodDeeds();
+        pinocchio.doGoodDeeds();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.repairHead();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
+        pinocchio.tellLies();
 
     }
 }
