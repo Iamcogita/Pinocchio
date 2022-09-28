@@ -14,14 +14,17 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
     - Attendance slots 
  - Allows for users to add themselves to event attendance list
  - Sends email to users when registered
+ - Logs all errors
+ - Creates QRCode from external API
 <p></p>
 
  ## How it does it:
  
- - Add user to attendance list if there are available slots
+ - Adds user to event attendance list if there are available slots
+ - Adds eventId to list of events on the user side
  - If there are no available slots, it adds the user to a waitting list
- <table><td>
-  if ((event.getAttendance().size() + 1)<= event.getSlots()){<br>
+ <table><td><h6>
+  if ((event.getAttendance().size() + 1) <= event.getSlots()){<br>
             event.getAttendance().add(user);<br>
             eventRepository.save(event);<br>
             user.getEvents().add(id);<br>
@@ -31,10 +34,31 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
   event.getWaitingList().add(user);<br>
         eventRepository.save(event);<br>
   }
-  </td></table>
-  
-<p style="color:blue;">I am blue</p>
+ </h6></td></table>
+ 
+ - Sends email with java email sender:
+<table><td><h6>
+        SimpleMailMessage message = new SimpleMailMessage();<br>
+        message.setFrom("fromemail@gmail.com");<br>
+        message.setTo(toEmail);<br>
+        message.setText(body);<br>
+        message.setSubject(subject);<br>
+        mailSender.send(message);<br>
+        System.out.println("Mail Sent...");<br>
+    }<br>
+</h6></td></table>
 
+- Creates QRCode to send through email:
+
+<table><td><h6>
+HttpRequest request = HttpRequest.newBuilder()<br>
+                .uri(URI.create("http://api.qrserver.com/v1/create-qr-code/?data="+userID+"&size=100x100"))<br>
+                .method("GET", HttpRequest.BodyPublishers.noBody())<br>
+                .build();<br>
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());<br>
+        return response.body();<br>
+ </h6></td></table>
+    
 ## Contributors:
 
 <table><tr>
