@@ -9,6 +9,7 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
 
 
  ## What it does:
+ 
  - Creates Users with jwt authentication
  - Creates events with:
     - Title
@@ -19,9 +20,10 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
     - Attendance slots 
  - Allows for users to add themselves to event attendance list
  - Sends email to users when registered
-<p></p>
-<p style="color:red">This is a paragraph.</p>
+<p>
+
  ## How it does it:
+ 
  - If there are available slots in attendance list of given event
  - If there are no available slots, it adds the user to a waitting list
     <p><table><td>
