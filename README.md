@@ -25,25 +25,13 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
  - If there are no available slots for users to attend any given event:
     <table>
   <td>
-      public void deleteUserPresence(String idUser, String idEvent) {
-        Event event = getEventByEventId(idEvent);
-        User user = getUserByUserId(idUser);
-        if (event.getAttendance().stream()
-                .anyMatch(theUser->theUser.getId().equals(user.getId()))){
-            event.getAttendance().removeIf(user1->user1.getId().equals(user.getId()));
+      if ((event.getAttendance().size() + 1)<= event.getSlots()){
+            event.getAttendance().add(user);
             eventRepository.save(event);
-            user.getEvents().remove(idEvent);
-            userService.updateUser(idUser,user);
-            updateWaitingListToAttendance(event);
+            user.getEvents().add(id);
+            userService.updateUser(userId,user);
             return;
         }
-        if (event.getWaitingList().stream().anyMatch(theUser->theUser.equals(user))){
-            event.getWaitingList().removeIf(user1->user1.getId().equals(user.getId()));
-            eventRepository.save(event);
-            return;
-        }
-        throw new UserNotFoundException("The user is not present in that event.");
-    }
   </td>
     </table>
  - that
