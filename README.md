@@ -24,7 +24,7 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
  ## How it does it:
  - If there are available slots in attendance list of given event
  - If there are no available slots, it adds the user to a waitting list
-    <p><table color= #hjhjhj><td>
+    <p><table style="color:red"><td>
   if ((event.getAttendance().size() + 1)<= event.getSlots()){<br>
             event.getAttendance().add(user);<br>
             eventRepository.save(event);<br>
