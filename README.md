@@ -9,7 +9,9 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
 
 
  ## What it does:
- - this
+ - Posts events with:
+    - bla
+    - bla  
  - that
 <p></p>
 
