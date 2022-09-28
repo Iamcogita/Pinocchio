@@ -9,10 +9,14 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
 
 
  ## What it does:
- - Posts events with:
-    - bla
-    - bla  
- - that
+ - Creates Users with jwt authentication
+ - Creates events with:
+    - Title
+    - Type
+    - State
+    - Date
+    - Starting time  
+ - Adds users to attendance list
 <p></p>
 
  ## How it does it:
