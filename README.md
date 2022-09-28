@@ -5,8 +5,8 @@
 </p>
 &nbsp;
 
-Mindera_Events is a rest arquitecture API created with springboot framework made for the Mindswap bootcamp at Mindera.
-It develops a mongoDB database of Mindera's Events, using pattern model view controller, relating users to events and managing attendance and waitting lists.
+Mindera_Events is a rest arquitecture API created with springboot framework made for the Mindswap bootcamp at Mindera.<br>
+It develops a mongoDB database of Mindera's Events, using pattern model view controller,<br> relating users to events and managing attendance and waitting lists.
 Also calls an exernal Api to generate a QR code for each Event.
 
 
