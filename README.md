@@ -9,23 +9,20 @@ Mindera_Events is a rest arquitecture API created with springboot framework made
 It develops a mongoDB database of Mindera's Events, using pattern model view controller, relating users to events and managing attendance and waitting lists. It also calls an exernal Api to generate a QR code for each Event.
 
 
-  
-## Documentation:
-
- <h2> What it does:</h2>
+ ## What it does:
  - this
  - that
 <p>
- <h2>How it does it:</h2>
+ ## How it does it:
  - this
  - that
 <p>
- <h2>How it's used: </h2>
+ ## How it's used:
  - like this
  - like that
 <p>
   
-<h2>THANK YOU FOR READING!</h2>
+<h3>THANK YOU FOR READING!</h3>
 
 ## Contributors:
 
