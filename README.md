@@ -24,6 +24,7 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
  ## How it does it:
  - If there are no available slots for users to attend any given event:
     <table>
+  <td>
       public void deleteUserPresence(String idUser, String idEvent) {
         Event event = getEventByEventId(idEvent);
         User user = getUserByUserId(idUser);
@@ -43,6 +44,7 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
         }
         throw new UserNotFoundException("The user is not present in that event.");
     }
+  </td>
     </table>
  - that
 <p></p>
