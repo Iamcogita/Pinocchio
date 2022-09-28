@@ -1,6 +1,6 @@
 <p align="center">
   <a href=" ">
-    <img src="https://i.imgur.com/dmbGSMJ.png" height="200px">
+    <img src="https://i.imgur.com/dmbGSMJ.png" height="180px">
   </a>
 </p>
 &nbsp;
