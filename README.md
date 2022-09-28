@@ -5,7 +5,7 @@
 </p>
 
 Mindera_Events is a rest arquitecture API created with springboot framework made for the Mindswap bootcamp at Mindera.<br>
-It develops a mongoDB database of Mindera's Events, using pattern model view controller, relating users to events and managing attendance and waitting lists. It also calls an exernal Api to generate a QR code for each Event.
+It manages a mongoDB database of Mindera's Events, using pattern model view controller, relating users to events and managing attendance and waitting lists. It also calls an exernal Api to generate a QR code for each Event.
 
 
  ## What it does:
@@ -22,7 +22,28 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
 <p></p>
 
  ## How it does it:
- - If 
+ - If there are no available slots for users to attend any given event:
+    <table>
+      public void deleteUserPresence(String idUser, String idEvent) {
+        Event event = getEventByEventId(idEvent);
+        User user = getUserByUserId(idUser);
+        if (event.getAttendance().stream()
+                .anyMatch(theUser->theUser.getId().equals(user.getId()))){
+            event.getAttendance().removeIf(user1->user1.getId().equals(user.getId()));
+            eventRepository.save(event);
+            user.getEvents().remove(idEvent);
+            userService.updateUser(idUser,user);
+            updateWaitingListToAttendance(event);
+            return;
+        }
+        if (event.getWaitingList().stream().anyMatch(theUser->theUser.equals(user))){
+            event.getWaitingList().removeIf(user1->user1.getId().equals(user.getId()));
+            eventRepository.save(event);
+            return;
+        }
+        throw new UserNotFoundException("The user is not present in that event.");
+    }
+    </table>
  - that
 <p></p>
 
