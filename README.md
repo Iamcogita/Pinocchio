@@ -23,8 +23,7 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
  - like this
  - like that
 <p></p>
-  
-<h3>THANK YOU FOR READING!</h3>
+ 
 
 ## Contributors:
 
@@ -41,3 +40,5 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
     
   </tr>
 </table>
+
+<h3>THANK YOU FOR READING!</h3>
