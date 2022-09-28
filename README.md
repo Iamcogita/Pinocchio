@@ -20,11 +20,11 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
  - Allows for users to add themselves to event attendance list
  - Sends email to users when registered
 <p></p>
-
+<p style="color:red">This is a paragraph.</p>
  ## How it does it:
  - If there are available slots in attendance list of given event
  - If there are no available slots, it adds the user to a waitting list
-    <p><table style="color:red"><td>
+    <p><table><td>
   if ((event.getAttendance().size() + 1)<= event.getSlots()){<br>
             event.getAttendance().add(user);<br>
             eventRepository.save(event);<br>
