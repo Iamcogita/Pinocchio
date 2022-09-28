@@ -13,12 +13,19 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
 ## Documentation:
 
  - What it does:
+ - this
+ - that
+<p>
  - How it does it:
+ - this
+ - that
+<p>
  - How it's used:
- - Conclusions
-
-
-<h1>THANK YOU FOR READING!</h1>
+ - like this
+ - like that
+<p>
+  
+<h2>THANK YOU FOR READING!</h2>
 
 ## Contributors:
 
