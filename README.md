@@ -30,10 +30,12 @@ It manages a mongoDB database of Mindera's Events, using pattern model view cont
             user.getEvents().add(id);<br>
             userService.updateUser(userId,user);<br>
             return;<br>
-  event.getWaitingList().add(user);
-        eventRepository.save(event);
-  }<br></td></table>
- - If there are no available slots in attendance list of given event, it adds the user to waitting list
+  }<br>
+  event.getWaitingList().add(user);<br>
+        eventRepository.save(event);<br>
+  }</td></table>
+
+- If there are no available slots in attendance list of given event, it adds the user to waitting list
   </p>
 
 ## Contributors:
