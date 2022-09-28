@@ -20,9 +20,9 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
 
 <h1>THANK YOU FOR READING!</h1>
 
-## Contributors 
+## Contributors:
 
-<table align="center">
+<table>
   <tr>
     
   <td align="center"><a href="https://github.com/joaoguima24"><img src="https://avatars.githubusercontent.com/u/108727426?v=4" width="100px;" alt="João Guimarães"/><br /><sub><b>João Guimarães</b></sub></a><br /></td>
