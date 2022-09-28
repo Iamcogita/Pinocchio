@@ -12,15 +12,17 @@ It develops a mongoDB database of Mindera's Events, using pattern model view con
  - Creates Users with jwt authentication
  - Creates events with:
     - Title
-    - Type
-    - State
+    - Type of event
+    - Approval state
     - Date
-    - Starting time  
- - Adds users to attendance list
+    - Starting time 
+    - Attendance slots 
+ - Allows for users to add themselves to event attendance list
+ - Sends email to users when registered
 <p></p>
 
  ## How it does it:
- - this
+ - If 
  - that
 <p></p>
 
